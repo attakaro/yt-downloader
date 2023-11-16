@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Youtube Downloader</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <section>
+        <section class="dropdown">
+            <button class="dropbtn">Customize</button>
+            <section class="dropdown-content">
+                <a href="#" id="text-color-setting">Text color</a>
+                <a href="#" id="text-shadow-color-setting">Text shadow color</a>
+                <a href="#" id="background-setting">Background</a>
+                <a href="#" id="progress-bar-background-color-setting">Progress bar background color</a>
+                <a href="#" id="progress-bar-main-color-setting">Progress bar main color</a>
+                <a href="#" id="progress-bar-glow-color-setting">Progress bar glow color</a>
+                <a href="#" id="header-setting">Header</a>
+                <a href="#" id="reset-settings">Reset settings</a>
+            </section>
+        </section> 
+
+
+        <h1 id="main-header" class="main-header">Youtube Video Downloader</h1>
+        <h2 id="download_status" class="download_status">STATUS: Not downloading</h2>
+
+        <section id="progress-bar-container" class="progress-bar-container">
+            <section id="progress-bar" class="progress-bar"></section>
+        </section>
+
+        <h3 id="speed" class="speed">Speed: 0 MB/s</h3>
+
+        <section class="form-with-buttons">
+            <form id="form" action="/submit" method="POST" autocomplete="off">
+                <label> Video Link: </label>
+                <input type="text" id="submit_link" name="submit_link">
+                <button type="submit" id="download_button"> Download </button>
+                <button type="button" id="clear_button"> Clear </button>
+            </form>
+        </section>
+    </section>
+
+    <script type="module" src="./scripts/ui.js"></script>
+</body>
+</html>
