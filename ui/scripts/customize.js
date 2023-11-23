@@ -74,17 +74,17 @@ export function resetSettings() {
 
     const progressBarBackgroundColor = "#ccc";
     localStorage.setItem('progressBarBackgroundColor', progressBarBackgroundColor);
-    const progressBarContainer = document.getElementsByClassName('progress-bar-container');
-    progressBarContainer[0].style.backgroundColor = progressBarBackgroundColor;
+    const progressBarContainer = document.getElementById('progress-bar-container');
+    progressBarContainer.style.backgroundColor = progressBarBackgroundColor;
 
     const progressBarMainColor = "#4CAF50";
     localStorage.setItem('progressBarMainColor', progressBarMainColor);
-    const progressBar = document.getElementsByClassName('progress-bar');
-    progressBar[0].style.backgroundColor = progressBarMainColor;
+    const progressBar = document.getElementById('progress-bar');
+    progressBar.style.backgroundColor = progressBarMainColor;
 
     const progressBarGlowColor = "0, 0, 0, 0.5";
     localStorage.setItem('progressBarGlowColor', progressBarGlowColor);
-    progressBarContainer[0].style.boxShadow = `0px 0px 15px 2px rgba(${progressBarGlowColor})`;
+    progressBarContainer.style.boxShadow = `0px 0px 15px 2px rgba(${progressBarGlowColor})`;
 
     const header = "Youtube Video Downloader";
     localStorage.setItem('header', header);
