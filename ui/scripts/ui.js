@@ -85,15 +85,15 @@ function loadSettings() {
     document.querySelector('body').style.backgroundImage = `url('${savedBackground}')`;
 
     const savedProgressBarBackgroundColor = localStorage.getItem('progressBarBackgroundColor');
-    const progressBarContainer = document.getElementsByClassName('progress-bar-container');
-    progressBarContainer[0].style.backgroundColor = savedProgressBarBackgroundColor;
+    const progressBarContainer = document.getElementById('progress-bar-container');
+    progressBarContainer.style.backgroundColor = savedProgressBarBackgroundColor;
 
     const savedProgressBarMainColor = localStorage.getItem('progressBarMainColor');
-    const progressBar = document.getElementsByClassName('progress-bar');
-    progressBar[0].style.backgroundColor = savedProgressBarMainColor;
+    const progressBar = document.getElementById('progress-bar');
+    progressBar.style.backgroundColor = savedProgressBarMainColor;
 
     const savedProgressBarGlowColor = localStorage.getItem('progressBarGlowColor');
-    progressBarContainer[0].style.boxShadow = `0px 0px 15px 2px rgba(${savedProgressBarGlowColor})`;
+    progressBarContainer.style.boxShadow = `0px 0px 15px 2px rgba(${savedProgressBarGlowColor})`;
 
     const savedHeader = localStorage.getItem('header');
     document.getElementById('main-header').textContent = savedHeader;
